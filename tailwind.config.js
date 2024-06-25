@@ -1,3 +1,5 @@
+const { transform } = require('next/dist/build/swc');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,7 +14,29 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "main": "#232440",
+        "text-color": "white"
+      },
+      keyframes: {
+        'scroll-left':{
+          '0%': {transform: 'translateX(0)'},
+          '100%': {transform: 'translateX(-50%)'},
+        },
+      },
+      animation: {
+        'scroll-left': 'scroll-left 10s linear infinite',
+      },
+      gridTemplateRows: {
+        'layout': 'auto 1fr auto',
+      },
+      gridTemplateColumns: {
+        'footer': 'auto 1fr'
+      }
     },
   },
-  plugins: [],
+  variants: {},
+  plugins: [
+    require('flowbite/plugin')
+  ],
 };
