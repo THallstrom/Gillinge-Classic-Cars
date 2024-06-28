@@ -1,0 +1,53 @@
+[
+    {
+        "Id":"1",
+        "Brand": "Buick Roadster Cabriolet",
+        "Model": "H-44",
+        "Year": "1919",
+        "EngineInfo": {
+            "Fuel": "Bensin",
+            "Motor": "6 cyl",
+            "Hp": "61hk",
+            "Volym": "4 Liter"
+        },
+        "MiscInfo": {
+            "NumbersManufactured": "7839",
+            "TopSpeed": "100",
+            "Owner": "Thomas Ekström",
+            "Imported": "1988",
+            "BoughtDate": "2023-04-26",
+            "Description": "Enligt källa 5 st kvarvarande i världen Bilen importerades till Sverige 1988 Bilen såldes ny 1919 för 1595 usd. Bilen har genomgått renovering i slutet på 70-talet."
+        },
+        "Images": {
+            "MainImage": "/images/LYP896/20200806_203732.jpg",
+            "SliderImages": {
+                "Img1": "public/images/LYP896/20200204_164121.jpg",
+                "Img2": "public/images/LYP896/20200217_184509.jpg"
+            }
+        }
+    },
+    {   
+        "Id":"2",
+        "Brand": "Volvo",
+        "Model": "P-1800",
+        "Year": "Unknown",
+        "EngineInfo": {
+            "Fuel": "Gasoline",
+            "Motor": "4 cyl",
+            "Hp": "",
+            "Volym": ""
+        },
+        "MiscInfo": {
+            "NumbersManufactured": "",
+            "TopSpeed": "",
+            "Description": ""
+        },
+        "Images": {
+            "MainImage": "/images/P1800/20200604_161419.jpg",
+            "SliderImages": {
+                "Img1": "public/images/P1800/20200604_161419.jpg",
+                "Img2": "public/images/LYP896/IMG_3809.jpg"
+            }
+        }
+    }
+]
