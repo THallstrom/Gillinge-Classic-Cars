@@ -22,20 +22,20 @@ const HamburgerMenu = () => {
           isOpen ? "block" : "hidden"
         }`}>
         <Link href="/" className="text-white py-2 px-4 hover:bg-gray-600">
-          Home
+          Hem
         </Link>
         <Link href="/about" className="text-white py-2 px-4 hover:bg-gray-600">
-          About
+          Om oss
         </Link>
         <Link
           href="/cars"
-          className="text-white py-2 px-4 hover:bg-gray-600">
-          Services
+          className="text-white py-2 px-4 whitespace-nowrap hover:bg-gray-600">
+          Våra Bilar
         </Link>
         <Link
           href="/contact"
           className="text-white py-2 px-4 hover:bg-gray-600">
-          Contact
+          Kontakt
         </Link>
       </nav>
     </div>

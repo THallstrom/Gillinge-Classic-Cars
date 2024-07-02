@@ -39,14 +39,14 @@
         },
         "MiscInfo": {
             "NumbersManufactured": "",
-            "TopSpeed": "",
+            "TopSpeed": "Förjävla snabb",
             "Description": ""
         },
         "Images": {
             "MainImage": "/images/P1800/20200604_161419.jpg",
             "SliderImages": {
                 "Img1": "public/images/P1800/20200604_161419.jpg",
-                "Img2": "public/images/LYP896/IMG_3809.jpg"
+                "Img2": "public/images/P1800/IMG_3809.jpg"
             }
         }
     }

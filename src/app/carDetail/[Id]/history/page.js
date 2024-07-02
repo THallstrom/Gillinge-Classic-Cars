@@ -13,20 +13,20 @@ function Page(test) {
     return (
         <div className="p-3 flex flex-col w-full sm:flex-row">
             <div className="sm:w-1/2">
-                <h1 className="block sm:hidden">
+                <h1 className="block text-center sm:hidden">
                     {car.Brand} {car.Model}
                 </h1>
-                <div className="w-58 h-58 object-cover">
+                <div className="object-cover ">
                     <Image
                         src={car.Images.MainImage}
                         alt={`${car.Brand} ${car.Model}`}
                         width={500}
-                        height={300}
-                        className="h-full w-full"
+                        height={500}
+                        className="w-full aspect-square object-cover rounded-lg"
                     />
                 </div>
             </div>
-            <div className="sm:w-1/2 p-3">
+            <div className="sm:w-1/2 pt-3">
                 <div className="flex justify-between gap-3 sm:flex-col  lg:flex-row md:flex-wrap">
                     <Button info={{ link: `/carDetail/${car.Id}`, text: "Data" }}></Button>
                     <Button
@@ -34,11 +34,11 @@ function Page(test) {
                             link: `/carDetail/${car.Id}/history`,
                             text: "Historia",
                         }}></Button>
-                        <Button
+                        {/* <Button
                         info={{
                             link: `/cars`,
                             text: "Våra Bilar",
-                        }}></Button>
+                        }}></Button> */}
                 </div>
                 <p>
                     {car.Brand} {car.Year}
