@@ -6,7 +6,7 @@ function Page() {
     return (
         <main className="min-h-screen p-5">
             <p>Våra bilar</p>
-            <div className="grid grid-cols-2 gap-5 pt-6 sm:flex">
+            <div className="grid gap-5 pt-6 sm:flex">
                 {carData.map((car, index) => (
                     <div key={index}>
                         <div className="min-h-72 max-h-72 w-56 rounded-md p-3 hover:shadow-xl">
