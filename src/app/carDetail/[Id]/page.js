@@ -5,12 +5,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 function Page(test) {
+    const [selectedInfo, setSelectedInfo] = useState("Data");
     const car = carData.find((car) => car.Id == test.params.Id);
     if (!car) {
         return <p>Car not found</p>;
     }
-
-    const [selectedInfo, setSelectedInfo] = useState("Data");
 
     const handleButtonClick = (option) => {
         setSelectedInfo(option);
