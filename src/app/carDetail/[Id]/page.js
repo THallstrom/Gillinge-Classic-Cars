@@ -29,11 +29,11 @@ function Page(test) {
         return () => clearInterval(interval);
     }, [images.length]);
 
-    const car = carData.find((car) => car.Id == test.params.Id);
-    if (!car) {
-        return <p>Car not found</p>;
-    }
-    
+    // const car = carData.find((car) => car.Id == test.params.Id);
+    // if (!car) {
+    //     return <p>Car not found</p>;
+    // }
+
     return (
         <div className="p-3 flex flex-col w-full sm:flex-row">
             <div className="sm:w-1/2">
