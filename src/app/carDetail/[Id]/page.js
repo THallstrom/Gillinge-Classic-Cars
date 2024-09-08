@@ -12,27 +12,27 @@ function Page(test) {
         setSelectedInfo(option);
     };
 
-    // Omvandla SliderImages till en array av bilder
-    const images = car.Images.SliderImages
-        ? Object.values(car.Images.SliderImages)
-        : [car.Images.MainImage]; // Om inga sliderbilder finns, använd MainImage
-
+    
     // Automatisk bildväxling var 5:e sekund
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImageIndex((prevIndex) =>
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
-            );
-        }, 2000); // 5000ms = 5 sekunder
+        );
+    }, 2000); // 5000ms = 5 sekunder
+    
+    // Rensa intervallet när komponenten unmountas
+    return () => clearInterval(interval);
+}, [images.length]);
 
-        // Rensa intervallet när komponenten unmountas
-        return () => clearInterval(interval);
-    }, [images.length]);
-
-    // const car = carData.find((car) => car.Id == test.params.Id);
-    // if (!car) {
-    //     return <p>Car not found</p>;
-    // }
+const car = carData.find((car) => car.Id == test.params.Id);
+if (!car) {
+    return <p>Car not found</p>;
+}
+// Omvandla SliderImages till en array av bilder
+const images = car.Images.SliderImages
+    ? Object.values(car.Images.SliderImages)
+    : [car.Images.MainImage]; // Om inga sliderbilder finns, använd MainImage
 
     return (
         <div className="p-3 flex flex-col w-full sm:flex-row">
