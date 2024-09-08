@@ -75,6 +75,7 @@ function Page(test) {
                         <p>Inköpt: {car.MiscInfo.BoughtDate}</p>
                         <p>Importerad: {car.MiscInfo.Imported}</p>
                         <p>Info: {car.MiscInfo.Description}</p>
+                        <p>Denna skall raderas</p>
                     </>
                 )}
             </div>
