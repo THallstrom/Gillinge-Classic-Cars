@@ -12,27 +12,26 @@ function Page(test) {
         setSelectedInfo(option);
     };
 
-    
     // Automatisk bildväxling var 5:e sekund
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prevIndex) =>
-                prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
-    }, 2000); // 5000ms = 5 sekunder
-    
-    // Rensa intervallet när komponenten unmountas
-    return () => clearInterval(interval);
-}, [images.length]);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentImageIndex((prevIndex) =>
+    //             prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    //         );
+    //     }, 2000); // 5000ms = 5 sekunder
 
-const car = carData.find((car) => car.Id == test.params.Id);
-if (!car) {
-    return <p>Car not found</p>;
-}
-// Omvandla SliderImages till en array av bilder
-const images = car.Images.SliderImages
-    ? Object.values(car.Images.SliderImages)
-    : [car.Images.MainImage]; // Om inga sliderbilder finns, använd MainImage
+    //     // Rensa intervallet när komponenten unmountas
+    //     return () => clearInterval(interval);
+    // }, [images.length]);
+
+    const car = carData.find((car) => car.Id == test.params.Id);
+    if (!car) {
+        return <p>Car not found</p>;
+    }
+    // Omvandla SliderImages till en array av bilder
+    const images = car.Images.SliderImages
+        ? Object.values(car.Images.SliderImages)
+        : [car.Images.MainImage]; // Om inga sliderbilder finns, använd MainImage
 
     return (
         <div className="p-3 flex flex-col w-full sm:flex-row">
@@ -53,14 +52,16 @@ const images = car.Images.SliderImages
             <div className="sm:w-1/2 pt-3 sm:px-3">
                 <div className="flex justify-between gap-3 sm:flex-col  lg:flex-row md:flex-wrap">
                     {/* Snygga gärna till med en komponent istället för div */}
-                    <div className="bg-main text-text-color text-center px-3 py-2 min-w-36 rounded-lg font-semibold border-text-color border hover:bg-text-color hover:text-main " onClick={() => (
-                        handleButtonClick("Data")
-                    )}>
+                    <div
+                        className="bg-main text-text-color text-center px-3 py-2 min-w-36 rounded-lg font-semibold border-text-color border hover:bg-text-color hover:text-main "
+                        onClick={() => handleButtonClick("Data")}
+                    >
                         Data
                     </div>
-                    <div className="bg-main text-text-color text-center px-3 py-2 min-w-36 rounded-lg font-semibold border-text-color border hover:bg-text-color hover:text-main " onClick={() => (
-                        handleButtonClick("test")
-                    )}>
+                    <div
+                        className="bg-main text-text-color text-center px-3 py-2 min-w-36 rounded-lg font-semibold border-text-color border hover:bg-text-color hover:text-main "
+                        onClick={() => handleButtonClick("test")}
+                    >
                         Historia
                     </div>
                 </div>
