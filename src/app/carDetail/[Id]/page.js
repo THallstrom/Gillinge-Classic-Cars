@@ -2,10 +2,12 @@
 
 import carData from "/public/json/carData.json";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Page(test) {
     const [selectedInfo, setSelectedInfo] = useState("Data");
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
     const car = carData.find((car) => car.Id == test.params.Id);
     if (!car) {
         return <p>Car not found</p>;
@@ -15,6 +17,23 @@ function Page(test) {
         setSelectedInfo(option);
     };
 
+    // Omvandla SliderImages till en array av bilder
+    const images = car.Images.SliderImages
+        ? Object.values(car.Images.SliderImages)
+        : [car.Images.MainImage]; // Om inga sliderbilder finns, använd MainImage
+
+    // Automatisk bildväxling var 5:e sekund
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) =>
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 2000); // 5000ms = 5 sekunder
+
+        // Rensa intervallet när komponenten unmountas
+        return () => clearInterval(interval);
+    }, [images.length]);
+
     return (
         <div className="p-3 flex flex-col w-full sm:flex-row">
             <div className="sm:w-1/2">
@@ -23,7 +42,7 @@ function Page(test) {
                 </h1>
                 <div className="object-cover ">
                     <Image
-                        src={car.Images.MainImage}
+                        src={images[currentImageIndex]}
                         alt={`${car.Brand} ${car.Model}`}
                         width={500}
                         height={500}

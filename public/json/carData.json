@@ -21,8 +21,9 @@
         "Images": {
             "MainImage": "/images/LYP896/20200806_203732.jpg",
             "SliderImages": {
-                "Img1": "public/images/LYP896/20200204_164121.jpg",
-                "Img2": "public/images/LYP896/20200217_184509.jpg"
+                "Img1": "/images/LYP896/20200204_164121.jpg",
+                "Img2": "/images/LYP896/20200217_184509.jpg",
+                "img3": "/images/LYP896/20200806_203732.jpg"
             }
         }
     },
@@ -45,8 +46,8 @@
         "Images": {
             "MainImage": "/images/P1800/20200604_161419.jpg",
             "SliderImages": {
-                "Img1": "public/images/P1800/20200604_161419.jpg",
-                "Img2": "public/images/P1800/IMG_3809.jpg"
+                "Img1":"/images/P1800/20200604_161419.jpg",
+                "Img2":"/images/P1800/IMG_3809.jpeg"
             }
         }
     }
