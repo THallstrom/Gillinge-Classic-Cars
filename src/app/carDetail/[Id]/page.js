@@ -1,11 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import carData from "/public/json/carData.json";
 import Image from "next/image";
-import Button from "@/components/buttonDetail";
 import { useState } from "react";
-import BtnTest from "@/components/btnTest";
 
 function Page(test) {
     const car = carData.find((car) => car.Id == test.params.Id);
@@ -75,7 +72,6 @@ function Page(test) {
                         <p>Inköpt: {car.MiscInfo.BoughtDate}</p>
                         <p>Importerad: {car.MiscInfo.Imported}</p>
                         <p>Info: {car.MiscInfo.Description}</p>
-                        <p>Denna skall raderas</p>
                     </>
                 )}
             </div>
@@ -84,6 +80,3 @@ function Page(test) {
 }
 
 export default Page;
-
-// "MiscInfo": {
-//             "NumbersManufactured": "7839",
