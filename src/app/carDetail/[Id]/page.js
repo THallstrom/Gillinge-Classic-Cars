@@ -2,6 +2,7 @@
 
 import carData from "/public/json/carData.json";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function Page(test) {
@@ -11,6 +12,10 @@ function Page(test) {
     const handleButtonClick = (option) => {
         setSelectedInfo(option);
     };
+
+    const returnClick = () => {
+        
+    }
 
     // Automatisk bildväxling var 5:e sekund
     // useEffect(() => {
@@ -36,9 +41,12 @@ function Page(test) {
     return (
         <div className="p-3 flex flex-col w-full sm:flex-row">
             <div className="sm:w-1/2">
+            <div class="flex gap-3 items-center">
+            <Link href="/cars" className="md:hidden bg-main text-white text-center px-3 py-2 rounded-lg  border-text-color border font-bold my-2">&#8592;</Link>
                 <h1 className="block text-center sm:hidden">
                     {car.Brand} {car.Model}
                 </h1>
+            </div>
                 <div className="object-cover ">
                     <Image
                         src={images[currentImageIndex]}
@@ -64,6 +72,7 @@ function Page(test) {
                     >
                         Historia
                     </div>
+                    
                 </div>
                 {selectedInfo === "Data" ? (
                     <>
