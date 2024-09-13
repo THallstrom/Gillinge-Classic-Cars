@@ -41,6 +41,11 @@ const HamburgerMenu = () => {
           className="text-white py-2 px-4 hover:bg-gray-600" onClick={closeMenu}>
           Kontakt
         </Link>
+        <Link
+          href="/testpage"
+          className="text-white py-2 px-4 hover:bg-gray-600" onClick={closeMenu}>
+          test
+        </Link>
       </nav>
     </div>
   );

@@ -11,6 +11,7 @@ function Navbar() {
         <Link href="/cars" className="hidden md:block">Våra bilar</Link>
         <Link href="/about" className="hidden md:block">Om Oss</Link>
         <Link href="/contact" className="hidden md:block">Kontakt</Link>
+        <Link href="/testpage" className="hidden md:block">Test</Link>
       </ul>
     </div>
   );
